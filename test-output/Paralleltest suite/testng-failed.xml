@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="2" guice-stage="DEVELOPMENT" name="Failed suite [Paralleltest suite]" parallel="tests">
+  <test name="Test1(failed)" parallel="tests">
+    <parameter name="browser" value="IE"/>
+    <classes>
+      <class name="com.ReservationBooking.test">
+        <methods>
+          <include name="openBrowser"/>
+          <include name="test1"/>
+        </methods>
+      </class> <!-- com.ReservationBooking.test -->
+    </classes>
+  </test> <!-- Test1(failed) -->
+  <test name="test(failed)" parallel="tests">
+    <parameter name="browser" value="chrome"/>
+    <classes>
+      <class name="com.ReservationBooking.test">
+        <methods>
+          <include name="openBrowser"/>
+          <include name="test1"/>
+        </methods>
+      </class> <!-- com.ReservationBooking.test -->
+    </classes>
+  </test> <!-- test(failed) -->
+</suite> <!-- Failed suite [Paralleltest suite] -->
